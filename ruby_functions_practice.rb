@@ -31,23 +31,38 @@ def add_string_as_number(str_1, str_2)
 end
 
 def number_to_full_month_name(number)
-  if (number == 1)
-  return "January"
-elsif (number == 3)
-  return "March"
-elsif (number == 9)
-  return "September"
+  case number
+  when 1
+    return "January"
+  when 2
+    return "February"
+  when 3
+    return "March"
+  when 4
+    return "April"
+  when 5
+    return "May"
+  when 6
+    return "June"
+  when 7
+    return "July"
+  when 8
+    return "August"
+  when 9
+    return "September"
+  when 10
+    return "October"
+  when 11
+    return "November"
+  when 12
+    return "December"
+  else
+    return "fail"
   end
 end
 
 def number_to_short_month_name(number)
-  if (number == 1)
-  return "Jan"
-elsif (number == 4)
-  return "Apr"
-elsif (number == 10)
-  return "Oct"
-  end
+    return number_to_full_month_name(number).slice(0..2)
 end
 
 def volume_of_cube(side)
